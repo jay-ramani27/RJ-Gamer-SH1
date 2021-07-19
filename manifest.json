@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "社会主义核心价值观：富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善。",
+        "name": "ABC Shader 8.0 E",
+        "uuid": "eca0a11f-ded1-49a6-9b10-512ff9a6f564",
+        "version": [1, 2, 6]
+    },
+    "modules": [
+        {
+            "description": "社会主义核心价值观：富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善。",
+            "type": "resources",
+            "uuid": "922d0ba4-d3fe-4121-8981-81532ab5680d",
+            "version": [1, 2, 6]
+        }
+    ]
+}
