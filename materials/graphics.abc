@@ -1,0 +1,23 @@
+#include "Bugset/setting.inc"
+#include "Bugset/colorsetting.abc"
+#include "BUGJUMP/uniformPerFrameConstants.h"
+
+
+bool NetherWorld(vec4 X){if(X.r >X.b &&X.r < 0.5 &&X.b < 0.05){return true;}else{return false;}}
+bool EndWorld(vec4 X){if((X.g<X.r)&&(X.g<X.b)&&(X.b>X.r)&&(X.r<0.05&&X.b<0.05&&X.g<0.05)){return true;}else{return false;}}
+bool UnWater(vec4 X){if(X.b>X.r*1.8&&X.g>X.r*1.5&&X.b>X.g*1.2&&X.b>=0.16){return true;}else{return false;}}
+bool WaterAbc(vec4 X){if((X.r*1.1<X.b)&&(X.b*1.25>X.g)&&(X.g>X.r)&&(X.a>0.0)){return true;}else{return false;}}
+
+highp float rand(highp vec2 X){ 
+	return fract(cos(X.x + X.y *252.0) * 75.0);}
+
+highp float noise(highp vec2 X){ 
+   highp vec2 A = floor(X); 
+   highp vec2 B = fract(X); 
+   highp vec2 C = pow(B,vec2(3.0))*(3.0- 2.0*B); 
+   highp float D = rand(A+vec2(0.0,0.0));
+   highp float E = rand(A+vec2(1.0,0.0));
+   highp float F = rand(A+vec2(0.0,1.0));
+   highp float G = rand(A+vec2(1.0,1.0));
+   highp float X1 = mix( mix(D, E, C.x),mix(F, G, C.x),C.y);
+	return X1;}
